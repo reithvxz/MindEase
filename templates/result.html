@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hasil Tes - MindEase</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="static/styles.css">
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <div class="logo">
+                <img src="static/foto/Logo.png" alt="Logo MindEase" class="logo-img">
+                <h1>MindEase</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="{{ url_for('home') }}">Home</a></li>
+                    <li><a href="{{ url_for('tes') }}">Tes</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <section class="result">
+            <h2>Hasil Stress Check</h2>
+            <p class="result-text">Berdasarkan input Anda, tingkat stres yang Anda miliki adalah:</p>
+            <div class="result-box">
+                {% if result %}
+                    <p><strong>{{ result }}</strong></p>
+                {% else %}
+                    <p>Terjadi kesalahan atau hasil tidak dapat ditentukan.</p>
+                {% endif %}
+            </div>
+            <div class="advice-box">
+                <h3>Saran untuk Anda:</h3>
+                {% if advice %}
+                    <p>{{ advice }}</p>
+                {% else %}
+                    <p>Kami tidak dapat memberikan saran karena kesalahan teknis.</p>
+                {% endif %}
+            </div>
+            <a href="{{ url_for('tes') }}" class="retry-btn">Coba Tes Lagi</a>
+            <a href="/" class="home-btn">Kembali ke Home</a>
+        </section>
+    </main>
+</body>
+</html>

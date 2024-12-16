@@ -1,0 +1,449 @@
+/* Tetap */
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #fff;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo-img {
+  width: 60px;
+  height: 60px;
+  margin-right: 30px;
+  border-radius: 30%;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 50px;
+  background-color: #f9f9f9;
+  position: relative;
+  z-index: 2;
+}
+
+.navbar .logo h1 {
+  color: #010101;
+  font-weight: 600;
+  font-size: 35px;
+}
+
+.navbar ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.navbar ul li {
+  margin-left: 20px;
+}
+
+.navbar ul li a {
+  text-decoration: none;
+  color: #010101;
+  font-weight: 400;
+}
+
+.navbar ul li a.active {
+  font-weight: 600;
+  color: #FF7A7B; /* Warna halaman aktif */
+}
+
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #FFA3A4;
+  padding: 150px;
+  overflow: hidden;
+}
+
+.hero .content h2 {
+  color: #FBFBFB;
+  font-size: 45px;
+  font-weight: 600;
+  max-width: 500px;
+}
+
+.hero .image img {
+  width: 600px;
+  border-radius: 10px;
+}
+
+.features {
+  display: flex;
+  justify-content: space-around;
+  padding: 40px 0;
+  background-color: #f5f5f5;
+}
+
+.feature-item {
+  display: flex;
+  flex-direction: column; /* Menjadikan judul dan gambar dalam satu kolom */
+  align-items: center;
+  width: 400px;
+  overflow: hidden;
+}
+
+.feature-item img {
+  width: 100%;
+  height: 200px; /* Tetap mempertahankan tinggi gambar */
+  object-fit: cover;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.feature-item img:hover {
+  transform: scale(1.05); /* Membesarkan gambar saat hover */
+}
+
+.feature-title {
+  font-size: 1.4rem; /* Sedikit lebih besar untuk keterbacaan */
+  font-weight: 600;
+  color: #333; /* Warna teks */
+  margin-top: 15px;
+  text-align: center; /* Memastikan judul rata tengah */
+}
+
+.footer {
+  background-color: #ff6a6b; /* Warna latar footer */
+  padding: 20px 40px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.footer-logo {
+  flex: 1 1 300px;
+  text-align: left;
+}
+
+.footer-logo-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.footer-logo-img {
+  width: 50px;
+  height: auto;
+  margin-right: 10px;
+}
+
+.footer-logo-title {
+  font-size: 20px;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.footer-links {
+  list-style: none;
+  padding: 0;
+  margin-top: 10px;
+}
+
+.footer-links li {
+  margin-bottom: 5px;
+}
+
+.footer-links a {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.footer-address {
+  flex: 1 1 300px;
+  text-align: left;
+  margin-top: 20px;
+  color: #ffffff;
+}
+
+.footer-group {
+  list-style: none;
+  padding: 0;
+  margin-top: 10px;
+}
+
+.footer-group li {
+  margin-bottom: 5px;
+}
+
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  border-top: 1px solid #ccc;
+  padding-top: 10px;
+  margin-top: 20px;
+  color: #ffffff;
+}
+
+.footer-social {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.footer-social img {
+  width: 20px;
+  height: 20px;
+}
+
+.questionnaire {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.question {
+  margin-bottom: 20px;
+}
+
+.question label {
+  font-weight: 600;
+  display: block;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.question input[type="number"],
+.question input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+.question div {
+  margin-top: 5px;
+}
+
+.question input[type="radio"] {
+  margin-right: 5px;
+}
+
+.submit-btn {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  background-color: #FF6A6B;
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+  background-color: #e05a5b;
+}
+
+/* Opsi pilihan jawaban horizontal */
+.question div {
+  display: flex; /* Membuat elemen dalam div disusun horizontal */
+  gap: 10px; /* Memberikan jarak antar elemen */
+  align-items: center; /* Menyelaraskan elemen secara vertikal */
+}
+
+/* Label untuk jawaban lebih rapi */
+.question label {
+  margin-right: 10px; /* Jarak kecil antara label dan input */
+}
+
+/* Hanya untuk halaman Stress Checker */
+body.stress-checker-page {
+  background-color: #FFA3A4; /* Warna latar belakang khusus halaman ini */
+}
+
+body.stress-checker-page .title {
+  text-align: center; /* Meletakkan teks di tengah */
+  color: #fff; /* Warna teks putih */
+  font-size: 36px; /* Ukuran font lebih besar */
+  font-weight: 600;
+  margin-bottom: 20px; /* Memberikan jarak dengan elemen berikutnya */
+}
+
+/* Hilangkan spinner di input angka */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none; /* Hilangkan spinner di browser berbasis WebKit (Chrome, Edge, Safari) */
+    margin: 0; /* Hilangkan margin spinner */
+}
+
+input[type="number"]
+
+/* Menyelaraskan input textbox agar berada di tengah dengan space kiri dan kanan yang sama */
+.question input[type="number"],
+.question input[type="text"] {
+    width: calc(100% - 40px); /* Memberikan jarak total horizontal 40px (20px kiri dan kanan) */
+    max-width: 500px; /* Batas maksimum lebar agar tidak terlalu panjang */
+    margin: 0 auto; /* Menempatkan input di tengah secara horizontal */
+    padding: 10px; /* Jarak dalam input */
+    display: block; /* Memastikan input menjadi elemen blok agar properti margin berfungsi */
+    border: 1px solid #ccc; /* Warna border */
+    border-radius: 5px; /* Menambahkan sudut melengkung */
+    font-size: 14px; /* Ukuran font */
+    box-sizing: border-box; /* Memastikan padding dihitung dalam lebar total */
+}
+
+/* Styling untuk container form agar lebih teratur */
+.question {
+    text-align: center; /* Menyelaraskan label ke tengah */
+    margin-bottom: 20px; /* Memberikan jarak antar pertanyaan */
+}
+
+/* Container untuk opsi (Ya/Tidak atau angka) agar berada di tengah */
+.question div {
+  display: flex; /* Menggunakan flexbox untuk menyusun elemen secara horizontal */
+  justify-content: center; /* Menempatkan elemen di tengah secara horizontal */
+  gap: 20px; /* Jarak antar elemen sedikit lebih besar */
+  align-items: center; /* Menyelaraskan elemen secara vertikal */
+  margin: 0 auto; /* Memastikan container tetap di tengah */
+}
+
+/* Styling tombol radio agar tetap rapi */
+.question input[type="radio"] {
+  margin: 0 5px; /* Jarak kecil antara tombol radio dan teks */
+}
+
+/* Styling untuk label tetap bold */
+.question label {
+  font-size: 14px; /* Ukuran font tetap seragam */
+  font-weight: bold; /* Memastikan teks tetap bold seperti sebelumnya */
+}
+
+/* Menyelaraskan input textbox agar lebih panjang dan tetap berada di tengah */
+.question input[type="number"],
+.question input[type="text"] {
+    width: calc(100% - 20px); /* Lebar hampir penuh container */
+    max-width: 700px; /* Batas maksimum lebar */
+    margin: 0 auto; /* Menempatkan di tengah */
+    padding: 10px; /* Jarak dalam */
+    display: block; /* Memastikan elemen menjadi blok */
+    border: 1px solid #ccc; /* Warna border */
+    border-radius: 5px; /* Menambahkan sudut melengkung */
+    font-size: 14px; /* Ukuran font */
+    box-sizing: border-box; /* Memastikan padding dihitung dalam lebar total */
+}
+
+.result {
+  text-align: center;
+  padding: 50px 20px;
+}
+
+.result-box {
+  background-color: #f5f5f5;
+  padding: 20px;
+  margin: 0 auto 20px; /* Tambahkan margin bawah */
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  display: inline-block; /* Pastikan elemen menyesuaikan konten */
+}
+
+.result-box p {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 600;
+  color: #010101;
+}
+
+.home-btn {
+  display: block; /* Pastikan tombol tampil di bawah */
+  margin: 20px auto 0; /* Jarak atas dan tampil di tengah */
+  padding: 10px 20px;
+  background-color: #FF6A6B;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.home-btn:hover {
+  background-color: #e05a5b;
+}
+
+.article-page {
+  font-family: 'Poppins', sans-serif;
+  padding: 20px 40px;
+  background-color: #fff; /* Warna latar artikel */
+  color: #333; /* Warna teks */
+}
+
+.article-header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.article-header h1 {
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: #e74c3c; /* Warna merah (sesuai dengan desain footer Anda) */
+  margin-bottom: 10px;
+}
+
+.article-header p {
+  font-size: 1rem;
+  color: #666;
+}
+
+.article-content {
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.article-content p {
+  margin-bottom: 15px;
+  text-align: justify;
+}
+
+.article-content ul {
+  margin-left: 20px;
+  margin-bottom: 20px;
+}
+
+.article-content ul li {
+  margin-bottom: 10px;
+  list-style-type: disc;
+}
+
+.back-btn {
+  display: block;
+  margin: 20px auto;
+  padding: 10px 20px;
+  text-align: center;
+  background-color: #e74c3c; /* Warna merah untuk tombol */
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  width: 150px;
+  font-size: 1rem;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+.back-btn:hover {
+  background-color: #c0392b; /* Warna merah lebih gelap saat hover */
+}

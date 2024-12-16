@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tes - MindEase</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="static/styles.css">
+</head>
+<body class="stress-checker-page">
+    <header>
+        <div class="navbar">
+            <div class="logo">
+                <img src="static/foto/Logo.png" alt="Logo MindEase" class="logo-img">
+                <h1>MindEase</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="{{ url_for('home') }}">Home</a></li>
+                    <li><a href="{{ url_for('tes') }}" class="active">Tes</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>    
+    <main>
+        <h2 class="title">Stress Checker</h2>
+        <form class="questionnaire" method="POST" action="/check_stress">
+            <!-- Gender -->
+            <div class="question">
+                <label>Pilih jenis kelamin anda:</label>
+                <div>
+                    <input type="radio" id="male" name="gender" value="Laki-laki" required>
+                    <label for="male">Laki-laki</label>
+                    <input type="radio" id="female" name="gender" value="Perempuan" required>
+                    <label for="female">Perempuan</label>
+                </div>
+            </div>
+
+            <!-- Age -->
+            <div class="question">
+                <label for="age">Masukkan usia anda:</label>
+                <input type="number" id="age" name="age" placeholder="Contoh: 25" required>
+            </div>
+
+            <!-- Weight -->
+            <div class="question">
+                <label for="weight">Masukkan berat badan anda (KG):</label>
+                <input type="number" id="weight" name="weight" placeholder="Contoh: 70" required>
+            </div>
+
+            <!-- Sleep Hours -->
+            <div class="question">
+                <label for="sleep_hours">Berapa jam rata-rata anda tidur setiap malam?</label>
+                <input type="number" id="sleep_hours" name="sleep_hours" placeholder="Contoh: 7" required>
+            </div>
+
+            <!-- Satisfaction with Sleep -->
+            <div class="question">
+                <label>Seberapa puas anda dengan kualitas tidur anda? (1 = Tidak puas, 5 = Sangat puas)</label>
+                <div>
+                    <input type="radio" id="satisfaction1" name="satisfaction_with_sleep" value="1" required>
+                    <label for="satisfaction1">1</label>
+                    <input type="radio" id="satisfaction2" name="satisfaction_with_sleep" value="2" required>
+                    <label for="satisfaction2">2</label>
+                    <input type="radio" id="satisfaction3" name="satisfaction_with_sleep" value="3" required>
+                    <label for="satisfaction3">3</label>
+                    <input type="radio" id="satisfaction4" name="satisfaction_with_sleep" value="4" required>
+                    <label for="satisfaction4">4</label>
+                    <input type="radio" id="satisfaction5" name="satisfaction_with_sleep" value="5" required>
+                    <label for="satisfaction5">5</label>
+                </div>
+            </div>
+
+            <!-- Sudden Events -->
+            <div class="question">
+                <label>Apakah anda merasa kesal saat sesuatu terjadi secara tidak terduga?</label>
+                <div>
+                    <input type="radio" id="sudden_yes" name="sudden_events" value="Ya" required>
+                    <label for="sudden_yes">Ya</label>
+                    <input type="radio" id="sudden_no" name="sudden_events" value="Tidak" required>
+                    <label for="sudden_no">Tidak</label>
+                </div>
+            </div>
+
+            <!-- Control Over Life -->
+            <div class="question">
+                <label>Apakah anda merasa tidak dapat mengendalikan hal-hal penting dalam hidup anda?</label>
+                <div>
+                    <input type="radio" id="control_yes" name="control_over_life" value="Ya" required>
+                    <label for="control_yes">Ya</label>
+                    <input type="radio" id="control_no" name="control_over_life" value="Tidak" required>
+                    <label for="control_no">Tidak</label>
+                </div>
+            </div>
+
+            <!-- Feeling Anxious -->
+            <div class="question">
+                <label>Apakah anda merasa gelisah?</label>
+                <div>
+                    <input type="radio" id="anxious_yes" name="feeling_anxious" value="Ya" required>
+                    <label for="anxious_yes">Ya</label>
+                    <input type="radio" id="anxious_no" name="feeling_anxious" value="Tidak" required>
+                    <label for="anxious_no">Tidak</label>
+                </div>
+            </div>
+
+            <!-- Managing Personal Issues -->
+            <div class="question">
+                <label>Apakah anda merasa yakin mampu menangani masalah pribadi anda?</label>
+                <div>
+                    <input type="radio" id="managing_yes" name="managing_personal_issues" value="Ya" required>
+                    <label for="managing_yes">Ya</label>
+                    <input type="radio" id="managing_no" name="managing_personal_issues" value="Tidak" required>
+                    <label for="managing_no">Tidak</label>
+                </div>
+            </div>
+
+            <!-- Expectations Met -->
+            <div class="question">
+                <label>Apakah anda merasa yakin bahwa segala sesuatu berjalan sesuai dengan keinginan anda?</label>
+                <div>
+                    <input type="radio" id="expectations_yes" name="expectations_met" value="Ya" required>
+                    <label for="expectations_yes">Ya</label>
+                    <input type="radio" id="expectations_no" name="expectations_met" value="Tidak" required>
+                    <label for="expectations_no">Tidak</label>
+                </div>
+            </div>
+
+            <!-- Overwhelmed -->
+            <div class="question">
+                <label>Apakah anda merasa tidak dapat mengatasi segala hal yang harus dilakukan?</label>
+                <div>
+                    <input type="radio" id="overwhelmed_yes" name="overwhelmed" value="Ya" required>
+                    <label for="overwhelmed_yes">Ya</label>
+                    <input type="radio" id="overwhelmed_no" name="overwhelmed" value="Tidak" required>
+                    <label for="overwhelmed_no">Tidak</label>
+                </div>
+            </div>
+
+            <!-- Too Many Problems -->
+            <div class="question">
+                <label>Apakah anda merasa kesulitan karena masalah yang anda hadapi sangat banyak sehingga merasa tidak mampu mengatasinya?</label>
+                <div>
+                    <input type="radio" id="problems_yes" name="too_many_problems" value="Ya" required>
+                    <label for="problems_yes">Ya</label>
+                    <input type="radio" id="problems_no" name="too_many_problems" value="Tidak" required>
+                    <label for="problems_no">Tidak</label>
+                </div>
+            </div>
+
+            <!-- Quick Temper -->
+            <div class="question">
+                <label>Apakah anda merasa mudah tersinggung atau cepat marah dalam situasi tertentu?</label>
+                <div>
+                    <input type="radio" id="temper_yes" name="quick_temper" value="Ya" required>
+                    <label for="temper_yes">Ya</label>
+                    <input type="radio" id="temper_no" name="quick_temper" value="Tidak" required>
+                    <label for="temper_no">Tidak</label>
+                </div>
+            </div>
+
+            <!-- Worrying About Future -->
+            <div class="question">
+                <label>Apakah anda merasa cemas tentang hal-hal yang belum terjadi atau hal-hal yang di luar kendali?</label>
+                <div>
+                    <input type="radio" id="worrying_yes" name="worrying_about_future" value="Ya" required>
+                    <label for="worrying_yes">Ya</label>
+                    <input type="radio" id="worrying_no" name="worrying_about_future" value="Tidak" required>
+                    <label for="worrying_no">Tidak</label>
+                </div>
+            </div>
+
+            <!-- Lack of Support -->
+            <div class="question">
+                <label>Apakah anda merasa bahwa tidak mendapatkan dukungan yang cukup dalam menghadapi tantangan hidup?</label>
+                <div>
+                    <input type="radio" id="support_yes" name="lack_of_support" value="Ya" required>
+                    <label for="support_yes">Ya</label>
+                    <input type="radio" id="support_no" name="lack_of_support" value="Tidak" required>
+                    <label for="support_no">Tidak</label>
+                </div>
+            </div>
+
+            <!-- Submit -->
+            <button type="submit" class="submit-btn">Submit</button>
+        </form>
+    </main>
+</body>
+</html>

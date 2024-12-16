@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MindEase</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="static/styles.css">
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <div class="logo">
+                <img src="static/foto/Logo.png" alt="Logo MindEase" class="logo-img">
+                <h1>MindEase</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="{{ url_for('home') }}" class="active">Home</a></li>
+                    <li><a href="{{ url_for('tes') }}">Tes</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>    
+    <main>
+        <section class="hero">
+            <div class="content">
+                <h2>Sehatkan Jiwa, Bahagiakan Hidup</h2>
+            </div>
+            <div class="image">
+                <img src="static/foto/Meditasi.png" alt="Ilustrasi Meditasi">
+            </div>
+        </section>
+        <section class="features">
+            <!-- Gambar Artikel 1 -->
+            <div class="feature-item">
+                <a href="{{ url_for('page1') }}">
+                    <img src="static/foto/Artikel1.jpg" alt="Artikel 1">
+                </a>
+                <h3 class="feature-title">Apa Itu Stres?</h3>
+            </div>
+        
+            <!-- Gambar Artikel 2 -->
+            <div class="feature-item">
+                <a href="{{ url_for('page2') }}">
+                    <img src="static/foto/Artikel2.jpg" alt="Artikel 2">
+                </a>
+                <h3 class="feature-title">Penyebab Stres</h3>
+            </div>
+        
+            <!-- Gambar Artikel 3 -->
+            <div class="feature-item">
+                <a href="{{ url_for('page3') }}">
+                    <img src="static/foto/Artikel3.jpg" alt="Artikel 3">
+                </a>
+                <h3 class="feature-title">Cara Mengelola Stres</h3>
+            </div>
+        </section>                     
+    </main>
+    <footer class="footer">
+        <div class="footer-container">
+            <!-- Bagian Logo dan Nama -->
+            <div class="footer-logo">
+                <div class="footer-logo-container">
+                    <img src="static/foto/Logo Putih.png" alt="MindEase Logo" class="footer-logo-img">
+                    <h1 class="footer-logo-title">MindEase</h1>
+                </div>
+                <ul class="footer-links">
+                    <li><a href="#">Privacy policies</a></li>
+                    <li><a href="#">Account</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Partners</a></li>
+                    <li><a href="#">Security</a></li>
+                </ul>
+            </div>
+    
+            <!-- Bagian Kelompok -->
+            <div class="footer-address">
+                <p><strong>Kelompok 15</strong></p>
+                <ul class="footer-group">
+                    <li>Syachazriel Riezqa Zahran (164231049)</li>
+                    <li>Okan Athallah Maredith (164231088)</li>
+                    <li>Mayla Faiza Rahma (164231090)</li>
+                </ul>
+            </div>
+        </div>
+        <!-- Bagian Bawah Footer -->
+        <div class="footer-bottom">
+            <p>&copy; MindEase, 2024. ALL RIGHTS RESERVED</p>
+            <div class="footer-social">
+                <p>Follow kami:</p>
+                <a href="#"><img src="static/foto/FB.png" alt="Facebook"></a>
+                <a href="#"><img src="static/foto/X.png" alt="Twitter"></a>
+                <a href="#"><img src="static/foto/YT.png" alt="YouTube"></a>
+                <a href="#"><img src="static/foto/LinkedIn.png" alt="LinkedIn"></a>
+            </div>
+        </div>
+    </footer>    
+</body>
+</html>
